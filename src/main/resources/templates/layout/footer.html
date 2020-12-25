@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+        <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+              href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+              rel="stylesheet" media="screen"/>
+        <link rel="stylesheet" th:href="@{/css/style.css}" href="../../static/css/style.css"/>
+    </head>
+    <body>
+
+        <div class="container">
+            <div th:fragment="footer">
+<!--                <nav class="navbar navbar-default">-->
+<!--                    <div class="container-fluid">-->
+<!--                        <div class="navbar-footer">-->
+<!--                            MCIT - Montreal College of Information Technology - Admission System ::. 2019-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </nav>-->
+
+               <div class="jumbotron" style="background-color:#99e600"> <!--  style="background-color:#111111"-->
+                    <div class="row text-right">
+                        <div class="row">
+                            <div class="navbar-footer">
+                            MCIT - Montreal College of Information Technology - College Grading System - 2019 &nbsp;
+
+                                    <img src="../../static/images/Pivotal_Java_Spring_Logo.png" width="30%"
+                                         th:src="@{/images/mcitcollege.jpg}"/>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

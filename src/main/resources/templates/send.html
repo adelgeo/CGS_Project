@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <title>School contact</title>
+
+    <th:block th:include="layout/header"></th:block>
+
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+          href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../static/css/style.css"/>
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">School Email Contact : </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div role="alert" data-th-if="${message}" data-th-text="${message}" data-th-class="${classCss}"></div>
+                <form name="sentMessage" id="contactForm" novalidate data-th-object="${student}" method="post"
+                      data-th-action="@{/post}">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First Name *"
+                                       data-th-field="*{fname}">
+                                <p class="help-block text-danger" data-th-if="${#fields.hasErrors('fname')}"
+                                   data-th-errors="*{fname}"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email *"
+                                       data-th-field="*{studentEmail}">
+                                <p class="help-block text-danger" data-th-if="${#fields.hasErrors('studentEmail')}"
+                                   data-th-errors="*{studentEmail}"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Phone *"
+                                       data-th-field="*{mobile}">
+                                <p class="help-block text-danger" data-th-if="${#fields.hasErrors('mobile')}"
+                                   data-th-errors="*{mobile}"></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Last Name *"
+                                       data-th-field="*{lname}">
+                                <p class="help-block text-danger" data-th-if="${#fields.hasErrors('lname')}"
+                                   data-th-errors="*{lname}"></p>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Your Message *"
+                                          data-th-field="*{note}" rows="10"></textarea>
+                                <p class="help-block text-danger" data-th-if="${#fields.hasErrors('note')}"
+                                   data-th-errors="*{note}"></p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-sm-12 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+<br/>
+<th:block th:include="layout/footer"></th:block>
+</body>
+</html>
+
+

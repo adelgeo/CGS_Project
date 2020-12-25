@@ -9,3 +9,178 @@
 .navbar-default .navbar-nav > li > a {
     color: white;
 }
+
+.table-condensed {
+    font-size: 10px;
+}
+
+.btn-xl {
+    color: white;
+    background-color: #fed136;
+    border-color: #fed136;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    color: white;
+    background-color: #fec503;
+    border-color: #f6bf01;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    background-image: none;
+}
+
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+    background-color: #fed136;
+    border-color: #fed136;
+}
+
+.btn-xl .badge {
+    color: #fed136;
+    background-color: white;
+}
+
+/**
+agency.css
+*/
+
+/*section#contact {*/
+/*    background-color: #222222;*/
+/*    background-image: url('../images/map-image.png');*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+/*section#contact .section-heading {*/
+/*    color: white;*/
+/*}*/
+
+/*section#contact .form-group {*/
+/*    margin-bottom: 25px;*/
+/*}*/
+
+/*section#contact .form-group input,*/
+/*section#contact .form-group textarea {*/
+/*    padding: 20px;*/
+/*}*/
+
+/*section#contact .form-group input.form-control {*/
+/*    height: auto;*/
+/*}*/
+
+/*section#contact .form-group textarea.form-control {*/
+/*    height: 150px;*/
+/*}*/
+
+/*section#contact .form-control:focus {*/
+/*    border-color: #fed136;*/
+/*    box-shadow: none;*/
+/*}*/
+
+/*section#contact ::-webkit-input-placeholder {*/
+/*    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*    text-transform: uppercase;*/
+/*    font-weight: 500;*/
+/*    color: #eeeeee;*/
+/*}*/
+
+/*section#contact :-moz-placeholder {*/
+/*    !* Firefox 18- *!*/
+/*    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*    text-transform: uppercase;*/
+/*    font-weight: 700;*/
+/*    color: #eeeeee;*/
+/*}*/
+
+/*section#contact ::-moz-placeholder {*/
+/*    !* Firefox 19+ *!*/
+/*    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*    text-transform: uppercase;*/
+/*    font-weight: 700;*/
+/*    color: #eeeeee;*/
+/*}*/
+
+/*section#contact :-ms-input-placeholder {*/
+/*    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*    text-transform: uppercase;*/
+/*    font-weight: 700;*/
+/*    color: #eeeeee;*/
+/*}*/
+
+section#contact .text-danger {
+    color: #e74c3c;
+}
+
+footer {
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer span.copyright {
+    line-height: 30px;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    text-transform: none;
+}
+
+footer ul.quicklinks {
+    margin-bottom: 0;
+    line-height: 30px;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    text-transform: none;
+}
+
+
+/**
+@media (max-width: 768px) {
+    #calendar .card {
+        padding: 0;
+    }
+
+    .month,
+    .table td, .table th,
+    #calendar .card-header {
+        padding: 4px;
+    }
+
+    .card-body {
+        padding: 4px !important;
+    }
+
+    .month ul li,
+    .table td, .table th,
+    .h4.card-text.calendar-info {
+        font-size: 10px;
+    }
+
+    .month ul li span {
+        font-size: 10px !important;
+    }
+}
+ */

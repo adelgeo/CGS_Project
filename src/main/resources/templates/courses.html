@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <title>Courses</title>
+    <th:block th:include="layout/header"></th:block>
+
+
+</head>
+<body>
+<div class="container">
+    <div th:if="${#lists.isEmpty(courses)}">
+        <div class="jumbotron">
+            <div class="row text-center">
+                <div class="row">
+                    <h2>No data</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div role="alert" data-th-if="${message}" data-th-text="${message}" data-th-class="${classCss}"></div>
+    </div>
+    <div th:if="${not #lists.isEmpty(courses)}">
+        <h2>All Courses</h2>
+        <table class="table table-responsive-sm">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+            <tr th:each="cours : ${courses}">
+                <td th:text="${cours.courseId}">Id</td>
+                <td th:text="${cours.name}" bgcolor="#708090">Name</td>
+                <td th:text="${cours.code}">Code</td>
+                <td th:text="${cours.description}">Description</td>
+                <td><a th:href="${'/courses/edit/' + cours.courseId}" class="btn btn-default">Edit</a></td>
+                <td><a th:href="${'/courses/delete/' + cours.courseId}" class="btn btn-danger">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<th:block th:include="layout/footer"></th:block>
+</body>
+</html>

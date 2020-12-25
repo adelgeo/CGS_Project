@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Contact Student</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+        table {
+            border: #222222;
+            width: 700px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+
+        h2 {
+            color: teal;
+        }
+
+        br {
+            clear: both;
+        }
+
+        th {
+            display: table-cell;
+            vertical-align: inherit;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+<body data-th-object="${student}">
+<!--Simple Email-->
+
+<!--<h3 data-th-text="*{fname}"></h3>-->
+<!--<h3 data-th-text="*{lname}"></h3>-->
+<!--<h3 data-th-text="*{studentEmail}"></h3>-->
+<!--<h3 data-th-text="*{mobile}"></h3>-->
+<!--<p data-th-text="*{note}"></p>-->
+<!--<p data-th-text="*{address}"></p>-->
+
+<!--/Simple Email-->
+<!--HTML EMAIL-->
+<div class="container">
+
+    <h2>MCIT Administration</h2>
+    <table class="table table-responsive-sm" th:border="1">
+        <tr>
+            <th>FName</th>
+            <th>LName</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td th:text="${student.fname}"></td>
+            <td th:text="${student.lname}"></td>
+            <td th:text="${student.address}"></td>
+            <td th:text="${student.studentEmail}"></td>
+            <td th:text="${student.mobile}"></td>
+        </tr>
+        <tr>
+            <th data-th-colspan="5">Message</th>
+        </tr>
+        <tr>
+            <td data-th-colspan="5" th:text="${student.note}"></td>
+        </tr>
+        <tr>
+            <td data-th-colspan="5"><img src="https://i.ytimg.com/vi/mwtPT1BR9Oo/hqdefault.jpg" width="200"></td>
+        </tr>
+
+    </table>
+</div>
+<!--/HTML EMAIL-->
+
+</body>
+</html>

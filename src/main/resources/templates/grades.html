@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+
+    <title>Grade List</title>
+
+    <th:block th:include="layout/header"></th:block>
+
+
+</head>
+<body>
+<div class="container">
+    <div th:if="${#lists.isEmpty(grades)}">
+        <div class="jumbotron">
+            <div class="row text-center">
+                <div class="row">
+                    <h2>No data</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div role="alert" data-th-if="${message}" data-th-text="${message}" data-th-class="${classCss}"></div>
+    </div>
+    <div th:if="${not #lists.isEmpty(grades)}">
+        <h2>All Grades</h2>
+        <table class="table table-responsive-sm">
+            <tr>
+                <th>#</th>
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Mark</th>
+                <th>Semester</th>
+                <th>Year</th>
+                <th bgcolor="#ff7f50">Grade</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Mail</th>
+
+            </tr>
+            <tr th:each="grade : ${grades}">
+                <td></td>
+                <td th:text="${grade.student.fname} +'&nbsp'+ ${grade.student.lname}"></td>
+                <td th:text="${grade.course.name}"></td>
+                <td th:text="${grade.mark}"></td>
+                <td th:text="${grade.semester}"></td>
+                <td th:text="${grade.year}"></td>
+                <td th:text="${grade.getGrade()}" bgcolor="#5f9ea0"></td>
+
+
+                <td><a th:href="${'/grades/edit/' + grade.gradeId}" class="glyphicon glyphicon-pencil"></a></td>
+                <td><a th:href="${'/grades/delete/' + grade.gradeId}" class="glyphicon glyphicon-trash"></a></td>
+                <td><a th:href="${'/email/contact/' + grade.student.id}"
+                       class="glyphicon glyphicon-envelope"></a></td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+<th:block th:include="layout/footer"></th:block>
+</body>
+</html>

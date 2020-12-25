@@ -1,7 +1,7 @@
-package com.example.springmvc.boot;
+package com.adel.boot;
 
-import com.example.springmvc.model.Student;
-import com.example.springmvc.repository.StudentRepository;
+import com.adel.model.Student;
+import com.adel.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -20,23 +20,13 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         Student student1 = new Student();
-        student1.setName("Milky Bar");
-        student1.setDescription("With chocolate");
-        student1.setType("CANDIES");
-        student1.setCategory("BARS");
-        student1.setPrice(3.99);
+        student1.setFname("Adel");
+        student1.setLname("Boudjema");
+        student1.setAddress("B-8828 Avenue Henri-Julien");
+        student1.setStudentEmail("aadel@hotmail.fr");
+        student1.setMobile("+15146045832");
 
         studentRepository.save(student1);
-
-        Student student2 = new Student();
-        student2.setName("Almond Bar");
-        student2.setDescription("With chocolate and honey");
-        student2.setType("CANDIES");
-        student2.setCategory("BARS");
-        student2.setPrice(4.99);
-
-        studentRepository.save(student2);
-
 
 
     }
